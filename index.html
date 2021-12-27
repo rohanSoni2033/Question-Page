@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="theme-color" content="#fe6d41">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main_container">
+            <div class="arrow">
+                <i class='fas fa-angle-left'></i>
+            </div>
+            <nav class="navigation">
+                <ul class="list_container">
+                    <li class="list_item">
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#">logout</a>
+                    </li>
+                </ul>
+                <div class="js_time_wrapper">
+                    <span class="icon-text-wrapper">
+                        <div class="clock-icon"></div>
+                        <span class="js-time" id="currentTime">
+                            09:27:16 AM
+                        </span>
+                    </span>
+                    <span class="icon-text-wrapper">
+                        <div class="calender-icon"></div>
+                        <span class="js-time" id="currentDate">18 Sep 21</span>
+                    </span>
+
+                </div>
+            </nav>
+
+            <div class="main_content">
+
+                <button class="navigation_button previous" id="previousQuestionButton"><i
+                        class="fas fa-angle-left"></i></button>
+
+
+                <div class="main_content_wrapper">
+                    <div class="main_content_container">
+                        <div class="question_number">Question no. <span id="questionNumber">???</span></div>
+                        <div class="main_content_wrapper_wrapper">
+                            <div class="total_questions">total questions : <span id="totalQuestions">???</span></div>
+                            <div class="total_time">
+                                <span>total time : <span id="totalTime">???</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="question_container">
+                        <span id="question"></span>
+                    </div>
+                    <form class="options_container">
+                        <div class="input_wrapper">
+                            <input type="radio" class="radio_input" name="option" value="a" id="option-a">
+                            <label for="option-a" class="option_wrapper">
+                                <div class="option_number_container">
+                                    <div class="option_number option-a">a </div>
+                                </div>
+
+                                <div class="option_text_container">
+                                    <span id="option--a">option a</span>
+
+                                </div>
+                            </label>
+                        </div>
+                        <div class="input_wrapper">
+                            <input type="radio" class="radio_input" name="option" value="b" id="option-b">
+                            <label for="option-b" class="option_wrapper">
+                                <div class="option_number_container">
+                                    <div class="option_number option-b">b </div>
+                                </div>
+
+                                <div class="option_text_container">
+                                    <span id="option--b">option b</span>
+                                </div>
+
+                            </label>
+                        </div>
+                        <div class="input_wrapper">
+                            <input type="radio" class="radio_input" name="option" value="c" id="option-c">
+                            <label for="option-c" class="option_wrapper">
+                                <div class="option_number_container">
+                                    <div class="option_number option-c">c </div>
+                                </div>
+                                <div class="option_text_container">
+                                    <span id="option--c">option c</span>
+                                </div>
+
+                            </label>
+                        </div>
+                        <div class="input_wrapper">
+                            <input type="radio" class="radio_input" name="option" value="d" id="option-d">
+                            <label for="option-d" class="option_wrapper">
+                                <div class="option_number_container">
+                                    <div class="option_number option-d">d </div>
+                                </div>
+
+                                <div class="option_text_container">
+                                    <span id="option--d">option d</span>
+                                </div>
+                            </label>
+                        </div>
+
+
+                        <div class="btn_wrapper">
+                            <button class="mark_red" id="markRed" type="button">
+                                mark for review
+                            </button>
+                            <button class="clear_selection" id="btnClear" type="reset">
+                                clear
+                            </button>
+                            <button class="submit" id="btnSubmit" type="button">
+                                <div class="icons8-checked"></div>
+                                submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <button class="navigation_button next" id="nextQuestionButton"><i
+                        class="fas fa-angle-right"></i></button>
+
+            </div>
+
+            <div class="question_tags">
+                <div class="visited_wrapper tags_wrapper">
+                    <div class="visited tags_btn">
+
+                    </div>
+                    <span>visited</span>
+                </div>
+
+                <div class="mark_for_review_wrapper tags_wrapper">
+                    <div class="mark_for_review tags_btn">
+
+                    </div>
+                    <span> mark for review</span>
+                </div>
+                <div class="not_visited_wrapper tags_wrapper">
+                    <div class="not_visited tags_btn">
+
+                    </div>
+                    <span>not visited</span>
+                </div>
+                <div class="answered_wrapper tags_wrapper">
+                    <div class="answered tags_btn">
+
+                    </div>
+                    <span>answered</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="side-bar">
+            <div class="student_info_wrapper">
+                <div class="student_image" id="studentImage">
+                    <img src="student_image.jpg" alt="">
+                </div>
+                <div class="student_name" id="studentName">
+                    username
+                </div>
+            </div>
+            <div class="time-tab">
+                <div class="time_counter_text">
+                    <div class="icons8-clock">
+
+                    </div>
+                </div>
+
+                <div class="time_counter" id="time_counter">
+                    <div class="minutes">
+                        <span class="minutes_text">
+                            minutes
+                        </span>
+                        <span id="remainingMinutes">
+                            00
+                        </span>
+
+                    </div>
+                    <div class="seconds">
+                        <span class="seconds_text">
+                            seconds
+                        </span>
+                        <span id="remainingSeconds">
+                            00
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question_grid_wrapper">
+
+                <div class="question_grid_text">
+                    navigation
+                </div>
+                <div class="question_navigation_container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="modals">
+            <div class="modal-heading-container">
+                <span class="modal-heading">Do you want to submit the exam?</span>
+            </div>
+            <div class="examInfo">
+                <span class="total-question-answered">
+                    you've answered only 10 question
+                </span>
+                <span class="question-mark-for-review">
+                    you've 5 marked for review
+                </span>
+            </div>
+            <div class="modal-button-container">
+                <button class="submit" id="btnSubmitModal" type="button">
+                    <div class="icons8-checked"></div>
+                    submit
+                </button>
+                <button class="cancel" id="btnCancel" type="button">
+                    cancel
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
+<!-- /////////////////////////////////////////////// -->
+<!-- THE END -->
