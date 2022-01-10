@@ -240,7 +240,6 @@ markForReviewButton.addEventListener('click', () => {
   }
 
   if (answered.indexOf(currentQuestion) > -1) {
-    console.log(answered.indexOf(currentQuestion));
     answered.splice(answered.indexOf(currentQuestion), 1);
   }
 
@@ -353,8 +352,3 @@ const navArrow = document.querySelector('.arrow');
 // THE END
 
 // NEW UPDATE
-
-// 1. PICTURES WITH IMAGES
-// 2. COMPLETE PROFILE OF STUDENT
-// 3. PRIVERCY 🔒
-// 4. CLEAN CODE

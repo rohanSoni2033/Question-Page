@@ -471,62 +471,6 @@ body {
   align-items: center;
   gap: 10px;
 }
-
-.page {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease-in-out;
-}
-
-.modal-heading-container {
-  padding: 10px;
-  background-color: #eee;
-}
-
-.show-modal {
-  opacity: 1;
-  visibility: visible;
-}
-
-.page.show-modal .modals {
-  transform: translate(-50%, -50%) rotateX(0deg);
-}
-
-.modals {
-  overflow: hidden;
-  width: 40%;
-  height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotateX(60deg);
-  transform-origin: bottom;
-  z-index: 5;
-  border-radius: 10px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.4s;
-}
-
-.modal-button-container {
-  width: 100%;
-  align-self: flex-end;
-  display: flex;
-  padding: 10px;
-  gap: 20px;
-  justify-content: right;
-  background-color: #eee;
-}
-
 /* SVGs CSS END HERE */
 
 /* MEDIA QUERIES */
