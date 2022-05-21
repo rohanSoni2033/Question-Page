@@ -6,215 +6,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/29c2b75804.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="main">
-        <div class="main_container">
-            <div class="arrow">
-                <i class='fas fa-angle-left'></i>
-            </div>
-            <nav class="navigation">
-                <ul class="list_container">
-                    <li class="list_item">
-                        <a href="home.html">Home</a>
+    <main class="main flex">
+        <div class="main_container flex col relative">
+            <button class="btn--change-question round absolute previous f-center" id="previousQuestionButton">
+                <svg class="icon">
+                    <use href="./sprite.svg#navigate_before"></use>
+                </svg>
+            </button>
+
+            <button class="btn--change-question round absolute next f-center" id="nextQuestionButton">
+                <svg class="icon">
+                    <use href="./sprite.svg#navigate_next"></use>
+                </svg>
+            </button>
+
+            <nav class="nav flex justify-between">
+                <ul class="f-container">
+                    <li>
+                        <a href="/">
+                            Home
+                        </a>
                     </li>
-                    <li class="list_item">
-                        <a href="#">logout</a>
+                    <li>
+                        <a href="/logout" class="icon-text-wrapper">
+                            <svg class="icon">
+                                <use href="./sprite.svg#logout"></use>
+                            </svg>
+                            <p>
+                                logout
+                            </p>
+                        </a>
                     </li>
                 </ul>
-                <div class="js_time_wrapper">
-                    <span class="icon-text-wrapper">
-                        <div class="svg_icon">
-                            <img src="./svg/icons8-clock.svg" alt="">
-                        </div>
-                        <span class="js-time" id="currentTime">
-
-                        </span>
-                    </span>
-                    <span class="icon-text-wrapper">
-                        <div class="svg_icon">
-                            <img src="./svg/calendar-svgrepo-com.svg" alt="">
-                        </div>
-                        <span class="js-time" id="currentDate"></span>
-                    </span>
-
+                <div class="f-container">
+                    <div class="icon-text-wrapper">
+                        <svg class="icon">
+                            <use href="./sprite.svg#schedule"></use>
+                        </svg>
+                        <p id="currentTime"></p>
+                    </div>
+                    <div class="icon-text-wrapper">
+                        <svg class="icon">
+                            <use href="./sprite.svg#event"></use>
+                        </svg>
+                        <p id="currentDate"></p>
+                    </div>
                 </div>
             </nav>
 
-            <div class="main_content">
+            <div class="main_content flex col justify-center items-center">
 
-                <button class="navigation_button previous" id="previousQuestionButton"><i
-                        class="fas fa-angle-left"></i></button>
-                <div class="main_content_wrapper">
-                    <div class="main_content_container">
-                        <div class="question_number">Question no. <span id="questionNumber">???</span></div>
-                        <div class="main_content_wrapper_wrapper">
-                            <div class="total_questions">total questions : <span id="totalQuestions">???</span></div>
-                            <div class="total_time">
-                                <span>total time : <span id="totalTime">???</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question_container">
-                        <span id="question"></span>
-                    </div>
-                    <form class="options_container">
-                        <div class="input_wrapper">
-                            <input type="radio" class="radio_input" name="option" value="a" id="option-a">
-                            <label for="option-a" class="option_wrapper">
-                                <div class="option_number_container">
-                                    <div class="option_number option-a">a </div>
-                                </div>
+                <div class="main_content_wrapper flex col items-center">
+                </div>
+                <div class="f-container container--bottom-btn">
+                    <button class="btn btn--mark-review" id="btnMarkReview" type="button">
+                        <p>mark for review</p>
+                    </button>
+                    <button class="btn btn--clear" id="btnClear" type="reset">
+                        <p>clear</p>
+                    </button>
+                    <button class="btn btn--submit" id="btnSubmit" type="button">
+                        <p>submit</p>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-                                <div class="option_text_container">
-                                    <span id="option--a">option a</span>
+        <div class="sidebar flex col">
+            <div class="user-details">
+                <div class="icon-text-wrapper">
+                    <svg class="icon">
+                        <use href="./sprite.svg#account" />
+                    </svg>
 
-                                </div>
-                            </label>
-                        </div>
-                        <div class="input_wrapper">
-                            <input type="radio" class="radio_input" name="option" value="b" id="option-b">
-                            <label for="option-b" class="option_wrapper">
-                                <div class="option_number_container">
-                                    <div class="option_number option-b">b </div>
-                                </div>
-
-                                <div class="option_text_container">
-                                    <span id="option--b">option b</span>
-                                </div>
-
-                            </label>
-                        </div>
-                        <div class="input_wrapper">
-                            <input type="radio" class="radio_input" name="option" value="c" id="option-c">
-                            <label for="option-c" class="option_wrapper">
-                                <div class="option_number_container">
-                                    <div class="option_number option-c">c </div>
-                                </div>
-                                <div class="option_text_container">
-                                    <span id="option--c">option c</span>
-                                </div>
-
-                            </label>
-                        </div>
-                        <div class="input_wrapper">
-                            <input type="radio" class="radio_input" name="option" value="d" id="option-d">
-                            <label for="option-d" class="option_wrapper">
-                                <div class="option_number_container">
-                                    <div class="option_number option-d">d </div>
-                                </div>
-
-                                <div class="option_text_container">
-                                    <span id="option--d">option d</span>
-                                </div>
-                            </label>
-                        </div>
-
-
-                        <div class="btn_wrapper">
-                            <button class="btn mark_red" id="markRed" type="button">
-                                mark for review
-                            </button>
-                            <button class="btn clear_selection" id="btnClear" type="reset">
-                                clear
-                            </button>
-                            <button class="btn submit" id="btnSubmit" type="button">
-                                <div class="svg_icon">
-                                    <img src="./svg/icons8-checked.svg" alt="">
-                                </div>
-                                submit
-                            </button>
-                        </div>
-                    </form>
+                    <p class="student_name" id="studentName">
+                        STUDENT NAME
+                    </p>
+                </div>
+            </div>
+            <div class="flex col bg-white container--timer">
+                <div class="flex justify-center container--timer-text">
+                    <p>time left</p>
                 </div>
 
-                <button class="navigation_button next" id="nextQuestionButton"><i
-                        class="fas fa-angle-right"></i></button>
-
+                <div class="flex justify-center timer-number">
+                    <p id="remainingMinutes">
+                        00
+                    </p>
+                    <p>:</p>
+                    <p id="remainingSeconds">
+                        00
+                    </p>
+                </div>
             </div>
 
-            <div class="question_tags">
-                <div class="visited_wrapper tags_wrapper">
+            <div class="question-palette">
+                <div class="question-palette__title flex justify-center" id="questionPaletteTitle">
+                    question palette
+                </div>
+
+                <div class="question-palette__container flex flex-wrap justify-evenly">
+                </div>
+            </div>
+
+            <div class="question_tags flex flex-wrap items-center">
+                <div class="tags_wrapper">
                     <div class="visited tags_btn"></div>
                     <span>visited</span>
                 </div>
-
-                <div class="mark_for_review_wrapper tags_wrapper">
-                    <div class="mark_for_review tags_btn"></div>
-                    <span> mark for review</span>
-                </div>
-                <div class="not_visited_wrapper tags_wrapper">
-                    <div class="not_visited tags_btn"></div>
+                <div class="tags_wrapper">
+                    <div class="not-visited tags_btn"></div>
                     <span>not visited</span>
                 </div>
-                <div class="answered_wrapper tags_wrapper">
+                <div class="tags_wrapper">
+                    <div class="review tags_btn"></div>
+                    <span>review</span>
+                </div>
+
+                <div class="tags_wrapper">
                     <div class="answered tags_btn"></div>
                     <span>answered</span>
                 </div>
 
             </div>
         </div>
-
-        <div class="side-bar">
-            <div class="student_info_wrapper">
-                <div class="student_image" id="studentImage">
-                    <img src="student_image.jpg" alt="">
-                </div>
-                <div class="student_name" id="studentName">
-                    username
-                </div>
-            </div>
-            <div class="time-tab">
-                <div class="time_counter_text">
-                    <div class="svg_icon">
-                        <img src="./svg/icons8-clock.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="time_counter" id="time_counter">
-                    <div class="minutes">
-                        <span class="minutes_text">
-                            minutes
-                        </span>
-                        <span id="remainingMinutes">
-                            00
-                        </span>
-
-                    </div>
-                    <div class="seconds">
-                        <span class="seconds_text">
-                            seconds
-                        </span>
-                        <span id="remainingSeconds">
-                            00
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="question_grid_wrapper">
-
-                <div class="question_grid_text">
-                    navigation
-                </div>
-                <div class="question_navigation_container">
-
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <script type="module" src="script.js"></script>
 </body>
 
 </html>
-<!-- /////////////////////////////////////////////// -->
-<!-- THE END -->
