@@ -13,20 +13,9 @@
 
 <body>
     <main class="main flex">
+
         <div class="main_container flex col relative">
-            <button class="btn--change-question round absolute previous f-center" id="previousQuestionButton">
-                <svg class="icon">
-                    <use href="./sprite.svg#navigate_before"></use>
-                </svg>
-            </button>
-
-            <button class="btn--change-question round absolute next f-center" id="nextQuestionButton">
-                <svg class="icon">
-                    <use href="./sprite.svg#navigate_next"></use>
-                </svg>
-            </button>
-
-            <nav class="nav flex justify-between">
+            <nav class="nav flex justify-between color-white">
                 <ul class="f-container">
                     <li>
                         <a href="/">
@@ -59,9 +48,19 @@
                     </div>
                 </div>
             </nav>
+            <button class="btn--change-question round absolute previous f-center" id="previousQuestionButton">
+                <svg class="icon">
+                    <use href="./sprite.svg#navigate_before"></use>
+                </svg>
+            </button>
 
-            <div class="main_content flex col justify-center items-center">
+            <button class="btn--change-question round absolute next f-center" id="nextQuestionButton">
+                <svg class="icon">
+                    <use href="./sprite.svg#navigate_next"></use>
+                </svg>
+            </button>
 
+            <div class="main_content flex col justify-center items-center relative">
                 <div class="main_content_wrapper flex col items-center">
                 </div>
                 <div class="f-container container--bottom-btn">
@@ -79,7 +78,7 @@
         </div>
 
         <div class="sidebar flex col">
-            <div class="user-details">
+            <div class="user-details flex col color-white">
                 <div class="icon-text-wrapper">
                     <svg class="icon">
                         <use href="./sprite.svg#account" />
@@ -117,20 +116,20 @@
 
             <div class="question_tags flex flex-wrap items-center">
                 <div class="tags_wrapper">
-                    <div class="visited tags_btn"></div>
+                    <div class="visited round"></div>
                     <span>visited</span>
                 </div>
                 <div class="tags_wrapper">
-                    <div class="not-visited tags_btn"></div>
+                    <div class="not-visited round"></div>
                     <span>not visited</span>
                 </div>
                 <div class="tags_wrapper">
-                    <div class="review tags_btn"></div>
+                    <div class="review round"></div>
                     <span>review</span>
                 </div>
 
                 <div class="tags_wrapper">
-                    <div class="answered tags_btn"></div>
+                    <div class="answered round"></div>
                     <span>answered</span>
                 </div>
 
